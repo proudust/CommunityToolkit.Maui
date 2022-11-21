@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:BasePage
+    x:Class="CommunityToolkit.Maui.Sample.Pages.Extensions.ImageResourceExtensionPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mct="clr-namespace:CommunityToolkit.Maui.Extensions;assembly=CommunityToolkit.Maui"
+    xmlns:pages="clr-namespace:CommunityToolkit.Maui.Sample.Pages"
+    xmlns:vm="clr-namespace:CommunityToolkit.Maui.Sample.ViewModels.Extensions"
+    x:DataType="vm:ImageResourceExtensionViewModel"
+    x:TypeArguments="vm:ImageResourceExtensionViewModel">
+
+    <pages:BasePage.Content>
+        <Grid ColumnDefinitions="*,50,*" RowDefinitions="100, *">
+            <Label
+                Grid.ColumnSpan="3"
+                HorizontalOptions="CenterAndExpand"
+                Text="ImageResourceExtension converts embedded image resource ID to it ImageSource"
+                TextColor="{StaticResource NormalLabelTextColor}" />
+            <Image
+                Grid.Row="1"
+                Grid.Column="0"
+                HeightRequest="150"
+                HorizontalOptions="End"
+                Source="{mct:ImageResource Id=CommunityToolkit.Maui.Sample.Resources.Embedded.XCT.png}"
+                WidthRequest="150" />
+            <Label
+                Grid.Row="1"
+                Grid.Column="1"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="-&gt;"
+                TextColor="{StaticResource NormalLabelTextColor}" />
+            <Image
+                Grid.Row="1"
+                Grid.Column="2"
+                HeightRequest="150"
+                HorizontalOptions="Start"
+                Source="{mct:ImageResource Id=CommunityToolkit.Maui.Sample.Resources.Embedded.MCT.png}"
+                WidthRequest="150" />
+        </Grid>
+    </pages:BasePage.Content>
+</pages:BasePage>

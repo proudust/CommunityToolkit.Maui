@@ -10,6 +10,7 @@ using CommunityToolkit.Maui.Sample.ViewModels;
 using CommunityToolkit.Maui.Sample.ViewModels.Alerts;
 using CommunityToolkit.Maui.Sample.ViewModels.Behaviors;
 using CommunityToolkit.Maui.Sample.ViewModels.Converters;
+using CommunityToolkit.Maui.Sample.ViewModels.Extensions;
 using CommunityToolkit.Maui.Sample.ViewModels.ImageSources;
 using CommunityToolkit.Maui.Sample.ViewModels.Layouts;
 using CommunityToolkit.Maui.Sample.ViewModels.Views;
@@ -80,6 +81,7 @@ public partial class AppShell : Shell
 
 		// Add Extensions View Models
 		CreateViewModelMapping<ColorAnimationExtensionsPage, ColorAnimationExtensionsViewModel, ExtensionsGalleryPage, ExtensionsGalleryViewModel>(),
+		CreateViewModelMapping<ImageResourceExtensionPage, ImageResourceExtensionViewModel, ExtensionsGalleryPage, ExtensionsGalleryViewModel>(),
 
 		// Add ImageSources View Models
 		CreateViewModelMapping<GravatarImageSourcePage, GravatarImageSourceViewModel, ImageSourcesGalleryPage, ImageSourcesGalleryViewModel>(),
